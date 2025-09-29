@@ -12,7 +12,8 @@ Built using:
 
 ## ✨ Features
 
-- 📸 Generate AI images from text
+- 📸 Generate AI images from text or **voice prompts**
+- 🎙️ Voice-to-image using automatic speech-to-text
 - 🧠 Powered by `black-forest-labs/FLUX.1-schnell` and [EURI API](https://euron.one)
 - 🤖 Telegram bot interface
 - 🔄 Fully automated with n8n workflows
@@ -24,7 +25,14 @@ Built using:
 
 Try the bot here: [@tanishrajput_bot](https://t.me/tanishrajput_bot)
 
-Send a prompt or voice note and receive AI-generated images within seconds!
+You can use either:
+
+### 📄 Text prompt:
+create an image of BMW car
+
+### 🎙️ Voice prompt:
+- Send a **voice note** (e.g., "create an image of a robot painting in a forest")
+- Bot will transcribe it and generate an image
 
 ---
 
@@ -52,10 +60,11 @@ Go to your n8n dashboard and import the file:
 /workflows/Telegram_Bot.json
 
 This file contains the complete logic to:
-- Receive Telegram messages
-- Extract prompts
-- Generate image using EURI or HF API
-- Send image back to user
+- Telegram text messages
+- Telegram voice messages
+- Prompt extraction (from text or voice)
+- Image generation via EURI API
+- Sending image back to user
 
 2. Telegram Trigger Node Setup
 Configure the Telegram Trigger node:
