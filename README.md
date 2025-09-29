@@ -13,7 +13,7 @@ Built using:
 ## ✨ Features
 
 - 📸 Generate AI images from text
-- 🧠 Powered by `black-forest-labs/FLUX.1-schnell` and [EURI](https://euron.one)
+- 🧠 Powered by `black-forest-labs/FLUX.1-schnell` and [EURI API](https://euron.one)
 - 🤖 Telegram bot interface
 - 🔄 Fully automated with n8n workflows
 - 🧪 Easy to deploy, test, and customize
@@ -40,7 +40,7 @@ Send a prompt or voice note and receive AI-generated images within seconds!
 
 ## 🛠️ Project Setup
 
-### 1. Clone the Repo
+### Clone the Repo
 
 ```bash
 git clone https://github.com/tanishra/Telegram-Image-Bot-Flux.git
@@ -49,9 +49,7 @@ cd Telegram-Image-Bot-Flux
 
 1. Import Workflow
 Go to your n8n dashboard and import the file:
-```http
 /workflows/Telegram_Bot.json
-```
 
 This file contains the complete logic to:
 - Receive Telegram messages
