@@ -15,9 +15,10 @@ Built using:
 - 📸 Generate AI images from text or **voice prompts**
 - 🎙️ Voice-to-image using automatic speech-to-text
 - 🧠 Powered by `black-forest-labs/FLUX.1-schnell` and [EURI API](https://euron.one)
+- 🔄 Fully automated via n8n workflows
+- 💾 Images saved to your **Google Drive**
+- 📊 Logs prompt + image link to **Google Sheets**
 - 🤖 Telegram bot interface
-- 🔄 Fully automated with n8n workflows
-- 🧪 Easy to deploy, test, and customize
 
 ---
 
@@ -35,6 +36,10 @@ create an image of BMW car
 - Bot will transcribe it and generate an image
 
 ---
+
+## n8n workflow
+
+![n8n workflow](./assets/n8n-workflow.png)
 
 ## 🧰 Tech Stack
 
@@ -65,6 +70,8 @@ This file contains the complete logic to:
 - Prompt extraction (from text or voice)
 - Image generation via EURI API
 - Sending image back to user
+- Saves the image to **Google Drive**
+- Logs prompt and image URL to a **Google Sheet**
 
 2. Telegram Trigger Node Setup
 Configure the Telegram Trigger node:
