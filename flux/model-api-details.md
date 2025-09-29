@@ -157,3 +157,12 @@ Depending on the setup, you might receive:
   "inputs": "={{$json['message']['text']}}"
 }
 ```
+
+---
+
+## Notes & Tips
+- The EURI API is recommended for production use due to performance and ease of use.
+- The Hugging Face API is good for testing and smaller workloads.
+- Keep your API keys secret and never commit them to public repos! Use .env files or n8n credentials.
+- Handle errors and timeouts in your workflow to ensure smooth UX.
+- You can customize parameters like image size and inference steps based on your use case.
