@@ -1,6 +1,6 @@
 # 🖼️ Telegram AI Image Generator Bot
 
-A simple yet powerful Telegram bot that generates images from text prompts using the `black-forest-labs/FLUX.1-schnell` model.
+A simple yet powerful Telegram bot that generates images from **text** or **voice prompts** using the `black-forest-labs/FLUX.1-schnell` model powered by EURI AI.
 
 Built using:
 - [n8n](https://n8n.io) for workflow automation
