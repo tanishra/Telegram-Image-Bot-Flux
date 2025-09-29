@@ -53,6 +53,7 @@ Parameters explained:
 
 ### Example cURL Request
 
+```http
 curl -X POST https://api.euron.one/api/v1/euri/images/generations \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_API_TOKEN" \
@@ -65,10 +66,12 @@ curl -X POST https://api.euron.one/api/v1/euri/images/generations \
     "response_format": "url",
     "style": "vivid"
   }'
+  ```
   
 ### Response
 
 The API responds with JSON containing the generated image URLs, for example:
+```http
 {
   "created": 1696000000,
   "data": [
@@ -76,6 +79,7 @@ The API responds with JSON containing the generated image URLs, for example:
     {"url": "https://cdn.euron.one/generated/def456.png"}
   ]
 }
+```
 
 ---
 
@@ -91,12 +95,14 @@ POST https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnel
 - Content-Type: application/json
 
 Request Body Format
+```http
 {
   "inputs": "a futuristic city with flying cars",
   "parameters": {
     "negative_prompt": "blurry, low quality"
   }
 }
+```
 
 ### Response
 Depending on the setup, you might receive:
@@ -114,11 +120,14 @@ Depending on the setup, you might receive:
 - URL: https://api.euron.one/api/v1/euri/images/generations
 - Authentication: Bearer Token (your EURI API key)
 - Headers:
+```http
 {
   "Content-Type": "application/json",
   "Authorization": "Bearer YOUR_API_TOKEN"
 }
+```
 - Body:
+```http
 {
   "prompt": "={{$json['message']['text']}}",
   "model": "black-forest-labs/FLUX.1-schnell",
@@ -128,6 +137,7 @@ Depending on the setup, you might receive:
   "response_format": "url",
   "style": "vivid"
 }
+```
 
 
 ## Using Hugging Face API in HTTP Request Node
@@ -135,11 +145,15 @@ Depending on the setup, you might receive:
 - URL: https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell
 - Authentication: Bearer Token (your Hugging Face API token)
 - Headers:
+```http
 {
   "Content-Type": "application/json",
   "Authorization": "Bearer YOUR_HF_TOKEN"
 }
+```
 - Body:
+```http
 {
   "inputs": "={{$json['message']['text']}}"
 }
+```
